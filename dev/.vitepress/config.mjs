@@ -5,7 +5,7 @@ export default defineConfig({
   title: "一武智能辅助文档",
   description: "A VitePress Site",
   lang: 'cn-ZH',
-  head: [["link", { rel: "icon", href: "/vit_dea/logo.png" }]],
+  head: [["link", { rel: "icon", href: "/vite-docs/logo.png" }]],
   outDir: "../docs", //build输出路径
   base: "/vite-docs/", //github-路径
   lastUpdated: true, //最后更新时间显示
@@ -56,7 +56,7 @@ export default defineConfig({
     },
 
     nav: [
-      { text: '首页', link: '/' },
+      { text: '导航', link: '/nav/' },
       {text: "指南",link: '/guide/'},
       {text: "组件",link: '/components/basic-component1'},
       {text: "前端",link: '/backend/index'},
@@ -64,9 +64,9 @@ export default defineConfig({
       {
         text:'Dropdown Menu',
         items: [
-          { text: 'Item A', link: '/front-end/' },
-          { text: 'Item b', link: '/item-2' },
-          { text: 'Item c', link: '/item-3' },
+          { text: '货币对冲', link: '/currency_hedging/' },
+          { text: '趋势策略', link: '/rend_strategy/' },
+          { text: 'XAU交易策略', link: '/xau_ea/' },
         ]
       },
     ],
@@ -126,25 +126,25 @@ export default defineConfig({
           ]
         }
       ],
-      '/front-end': [
+      '/currency_hedging': [
         {
-          text:'Item A',
+          text:'货币对冲',
           collapsed: false,
           items:[
-            {text:'shouye',link: '/front-end/index'},
-            {text:'front-one',link: '/front-end/item-1'},
-            {text:'front-two',link: '/front-end/item-2'},
-            {text:'front-three',link: '/front-end/item-3'},
+            {text:'shouye',link: '/currency_hedging/index'},
+            {text:'基本常识',link: '/currency_hedging/basic-common-sense'},
+            {text:'front-two',link: '/currency_hedging/item-2'},
+            {text:'front-three',link: '/currency_hedging/item-3'},
           ]
         },
         {
           text:'晋升通道',
           collapsed: true,
           items:[
-            {text:'晋升通道首页',link: '/front-end/jinsheng_index'},
-            {text:'front-one',link: '/front-end/jinsheng_item_1'},
-            {text:'front-two',link: '/front-end/jinsheng_item_2'},
-            {text:'front-three',link: '/front-end/jinsheng_item_3'},
+            {text:'晋升通道首页',link: '/currency_hedging/jinsheng_index'},
+            {text:'front-one',link: '/currency_hedging/jinsheng_item_1'},
+            {text:'front-two',link: '/currency_hedging/jinsheng_item_2'},
+            {text:'front-three',link: '/currency_hedging/jinsheng_item_3'},
           ]
         },
       ],
