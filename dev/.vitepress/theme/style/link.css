@@ -1,0 +1,39 @@
+/* .vitepress/theme/style/link.css */
+
+
+/* 将下面代码，复制粘贴到 link.css 中
+
+分别添加了 油管 和 B站 的链接图标
+
+SVG图形
+
+建议使用 32*32 的尺寸
+iconfont、xicons、iconpark 
+*/
+
+/* YouTube */
+.vp-doc a[href^="https://www.youtube.com/"]:before {
+    content: '';
+    background-image: url(https://img.deattor.us.kg/file/1729612018956_youtube.png);
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    background-size: cover;
+    margin-right: 4px;
+}
+
+/* 哔哩哔哩 */
+.vp-doc a[href^="https://www.bilibili.com/"]:before {
+    content: '';
+    background-image: url(https://img.deattor.us.kg/file/1729612025830_bilibili.png);
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    background-size: cover;
+    top: -2px;
+    margin-right: 4px;
+}

@@ -11,7 +11,7 @@ hero:
   text: "智能辅助管家"
   tagline: 自律在心，一路畅行
   image:
-    src: /zhishiku.png
+    src: /zhishiku2.png
     alt: 背景图片
   actions:
     - theme: brand

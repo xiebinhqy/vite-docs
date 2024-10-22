@@ -5,7 +5,7 @@ export default defineConfig({
   title: "一武智能辅助文档",
   description: "A VitePress Site",
   lang: 'cn-ZH',
-  head: [["link", { rel: "icon", href: "/vite-docs/logo.png" }]],
+  head: [["link", { rel: "icon", href: "/vite-docs/jilu.png" }]],
   outDir: "../docs", //build输出路径
   base: "/vite-docs/", //github-路径
   lastUpdated: true, //最后更新时间显示
@@ -51,18 +51,33 @@ export default defineConfig({
     },
     // 底部添加链接文本
     editLink:{
-      pattern: 'https://github.com/vuejs/vitepress/edit/main/docs/:path',
+      pattern: 'https://github.com/xiebinhqy/vite-docs/tree/main/docs:path',
       text: 'Edit this page on GitHub',
     },
 
     nav: [
-      { text: '导航', link: '/nav/' },
+      //{ text: '导航', link: '/nav/' },
+      {
+        text:'导航',
+        items: [
+          { text: 'DEA导航', link: '/dea_nav/' },
+          { text: '原有导航', link: '/nav/' },
+        ]
+      },
       {text: "指南",link: '/guide/'},
       {text: "组件",link: '/components/basic-component1'},
       {text: "前端",link: '/backend/index'},
-      { text: 'Examples', link: '/markdown-examples' },
+      { text: 'Extension', link: '/Forex_extension' },
       {
         text:'Dropdown Menu',
+        items: [
+          { text: '货币对冲', link: '/currency_hedging/' },
+          { text: '趋势策略', link: '/rend_strategy/' },
+          { text: 'XAU交易策略', link: '/xau_ea/' },
+        ]
+      },
+      {
+        text:'Index Menu',
         items: [
           { text: '货币对冲', link: '/currency_hedging/' },
           { text: '趋势策略', link: '/rend_strategy/' },
@@ -134,7 +149,7 @@ export default defineConfig({
             {text:'shouye',link: '/currency_hedging/index'},
             {text:'基本常识',link: '/currency_hedging/basic-common-sense'},
             {text:'front-two',link: '/currency_hedging/item-2'},
-            {text:'front-three',link: '/currency_hedging/item-3'},
+            {text:'货币对对冲系统',link: '/currency_hedging/item-3'},
           ]
         },
         {
@@ -148,6 +163,50 @@ export default defineConfig({
           ]
         },
       ],
+      '/rend_strategy': [
+        {
+          text:'趋势策略',
+          collapsed: false,
+          items:[
+            {text:'shouye',link: '/rend_strategy/index'},
+            {text:'基本常识',link: '/rend_strategy/basic-common-sense'},
+            {text:'front-two',link: '/rend_strategy/item-2'},
+            {text:'货币对对冲系统',link: '/rend_strategy/item-3'},
+          ]
+        },
+        {
+          text:'晋升通道',
+          collapsed: true,
+          items:[
+            {text:'晋升通道首页',link: '/rend_strategy/jinsheng_index'},
+            {text:'front-one',link: '/rend_strategy/jinsheng_item_1'},
+            {text:'front-two',link: '/rend_strategy/jinsheng_item_2'},
+            {text:'front-three',link: '/rend_strategy/jinsheng_item_3'},
+          ]
+        },
+      ],
+      '/xau_ea': [
+        {
+          text:'XAU交易策略',
+          collapsed: false,
+          items:[
+            {text:'shouye',link: '/xau_ea/index'},
+            {text:'基本常识',link: '/xau_ea/basic-common-sense'},
+            {text:'front-two',link: '/xau_ea/item-2'},
+            {text:'货币对对冲系统',link: '/xau_ea/item-3'},
+          ]
+        },
+        {
+          text:'晋升通道',
+          collapsed: true,
+          items:[
+            {text:'晋升通道首页',link: '/xau_ea/jinsheng_index'},
+            {text:'front-one',link: '/xau_ea/jinsheng_item_1'},
+            {text:'front-two',link: '/xau_ea/jinsheng_item_2'},
+            {text:'front-three',link: '/xau_ea/jinsheng_item_3'},
+          ]
+        },
+      ],
     },
     socialLinks: [
       { icon: 'github', link: 'https://github.com/vuejs/vitepress' },
@@ -155,8 +214,8 @@ export default defineConfig({
     ],
     //底部配置
     footer: {
-      message: 'Released under the MIT License.',
-      copyright:'Copyright © 2023-present Evan You',
+      message: 'Released under the MIT License...',
+      copyright:'Copyright © 2023-present Deattor Bin',
     },
     // 设置搜索框的样式
     search: {
