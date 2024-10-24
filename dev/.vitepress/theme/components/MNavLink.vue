@@ -3,7 +3,7 @@ import { computed } from 'vue'
 import { withBase } from 'vitepress'
 import { slugify } from '@mdit-vue/shared'
 
-import { NavLink } from '../untils/types'
+import { NavLink } from '../utils/types'
 
 const props = defineProps<{
   noIcon?: boolean
@@ -72,7 +72,7 @@ const formatBadge = computed(() => {
   transition: all 0.25s;
   &:hover {
     box-shadow: var(--vp-shadow-2);
-    //border-color: var(--vp-c-brand);
+    border-color: blue;
     text-decoration: initial;
     background-color: var(--vp-c-bg-soft-up);
     transform: translateY(-5px);

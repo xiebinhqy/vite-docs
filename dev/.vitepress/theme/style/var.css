@@ -19,7 +19,6 @@ h1 {
     text-decoration: none;
 }
 
-
 :root {
     --vp-c-brand-1: #18794e;
     --vp-c-brand-2: #299764;
@@ -58,30 +57,30 @@ h1 {
 
 
 
-  .under {
-    text-decoration: underline red;
-  }
-  
-  .over {
-    text-decoration: wavy overline lime;
-  }
-  
-  .line {
-    text-decoration: line-through;
-  }
-  
-  .plain {
-    text-decoration: none;
-  }
-  
-  .underover {
-    text-decoration: dashed underline overline;
-  }
-  
-  .thick {
-    text-decoration: solid underline purple 4px;
-  }
-  
-  .blink {
-    text-decoration: blink;
-  }
+.under {
+  text-decoration: underline red;
+}
+
+.over {
+  text-decoration: wavy overline lime;
+}
+
+/* .line {
+  text-decoration: line-through;
+} */
+
+.plain {
+  text-decoration: none;
+}
+
+.underover {
+  text-decoration: dashed underline overline;
+}
+
+.thick {
+  text-decoration: solid underline purple 4px;
+}
+
+.blink {
+  text-decoration: blink;
+}

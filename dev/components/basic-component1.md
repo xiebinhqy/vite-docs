@@ -1,9 +1,10 @@
 ---
-lastUpdated: false
+lastUpdated: true
 editLink: true
 ---
 
 # Basic Component 1
+<!-- <update /> -->
 
 
 <p class="under">此文本下方有一行线。</p>
@@ -54,6 +55,28 @@ This is a tip.
 ::: details
 This is a details block.
 :::
+
+
+::: code-group
+
+```sh [pnpm]
+pnpm add -D @mdit-vue/shared
+```
+
+```sh [yarn]
+yarn add -D @mdit-vue/shared
+```
+
+```sh [npm]
+npm i -D @mdit-vue/shared
+```
+
+```sh [bun]
+bun add -D @mdit-vue/shared
+```
+:::
+
+
 
 
 属性

@@ -10,17 +10,21 @@ export default defineConfig({
   base: "/vite-docs/", //github-路径
   lastUpdated: true, //最后更新时间显示
   //组件引入
-  // markdown: {
-  //   theme: {
-  //     light: 'vitesse-light',
-  //     dark: 'vitesse-dark'
-  //   },
-  //   lineNumbers: true,
-  //   config(md) {
-  //     md.use(componentPreview)
-  //     md.use(containerPreview)
-  //   }
-  // },
+  markdown: {
+    // 组件插入h1标题下
+    config: (md) => {
+      md.renderer.rules.heading_close = (tokens, idx, options, env, slf) => {
+          let htmlResult = slf.renderToken(tokens, idx, options);
+          if (tokens[idx].tag === 'h1') htmlResult += `<ArticleMetadata />`; 
+          return htmlResult;
+      }
+    },
+    image: {
+      // 开启图片懒加载
+      lazyLoading: true
+    },
+
+  },
   vite:{
     css: {
       preprocessorOptions:  {
@@ -65,7 +69,6 @@ export default defineConfig({
         ]
       },
       {text: "指南",link: '/guide/'},
-      {text: "组件",link: '/components/basic-component1'},
       {text: "前端",link: '/backend/index'},
       { text: 'Extension', link: '/Forex_extension' },
       {
@@ -84,6 +87,7 @@ export default defineConfig({
           { text: 'XAU交易策略', link: '/xau_ea/' },
         ]
       },
+      {text: "文档教程",link: '/components/basic-component1'},
     ],
 
     sidebar: {
@@ -117,27 +121,32 @@ export default defineConfig({
       ],
       '/components': [
         {
-          text: '通用基础组件',
+          text: '基础配置',
           collapsed: false,
           items: [
-            {text:'基础组件 1',link: '/components/basic-component1'},
-            {text:'基础组件 2',link: '/components/basic-component2'},
+            {text:'快速上手',link: '/components/basic-component1'},
+            {text:'配置',link: '/components/basic-component2'},
+            {text:'页面',link: '/components/basic-component2'},
           ]
         },
         {
-          text: '通用业务组件',
-          collapsed: true,
+          text: '文档教程',
+          collapsed: false,
           items: [
-            {text:'通用组件 1',link: '/components/common-component1'},
-            {text:'通用组件 2',link: '/components/common-component2'},
+            {text:'功能展示',link: '/components/common-component1'},
+            {text:'样式美化',link: '/components/common-component1'},
+            {text:'Frontmatter',link: '/components/common-component2'},
+            {text:'页面导航搭建',link: '/components/common-component2'},
           ]
         },
         {
-          text: '高级业务组件',
-          collapsed: true,
+          text: '进阶扩展',
+          collapsed: false,
           items: [
-            {text:'高级组件 1',link: '/components/pro-component1'},
-            {text:'高级组件 2',link: '/components/pro-component2'},
+            {text:'Markdown',link: '/components/pro-component1'},
+            {text:'组件',link: '/components/pro-component1'},
+            {text:'布局插槽',link: '/components/pro-component2'},
+            {text:'插件',link: '/components/pro-component3'},
           ]
         }
       ],
