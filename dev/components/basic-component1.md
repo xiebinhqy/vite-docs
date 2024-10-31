@@ -1,131 +1,165 @@
 ---
 lastUpdated: true
 editLink: true
+comment: true
 ---
 
-# Basic Component 1
+# 快速上手
 <!-- <update /> -->
 
+<Linkcard url="https://stackblitz.com/edit/vite-qpxcyc?file=docs%2Findex.md" title="在线体验及调试（StackBlitz 驱动）" description="https://vitepress.new/" logo="https://img.deattor.us.kg/file/1730012057796_markdown.png"/>
 
-<p class="under">此文本下方有一行线。</p>
-<p class="over">此文本上面有一行线。</p>
-<p class="line">此文本有一条线穿过它。</p>
-<p>
-  此<a class="plain" href="#">链接不会具有下划线</a
-  >，因为链接默认加下划线。移除锚点上的文本装饰时要小心，因为用户通常依赖下划线来表示超链接
-</p>
-<p class="underover">此文本在其上方<em>和</em>下方都有线条。</p>
-<p class="thick">在浏览器支持的情况下，此文本具有非常粗的紫色下划线。</p>
-<p class="blink">此文本可能会为你闪烁，具体取决于你使用的浏览器。</p>
+## 前期工作
 
-
-其他美化
-太多了，可以参照源文件来进行修改
-
-样式修改：path
-
-node_modules\vitepress\dist\client\theme-default\styles\var.css
-
-
-> 更新时间：2024年
-
-
-组件介绍
-
-
-
-{{ $frontmatter.title }}
-
-::: info
-This is an info box.
+::: tip 说明
+已经安装 或者 熟练了，可以不用看此步骤
 :::
 
-::: tip
-This is a tip.
-:::
 
-::: warning
-这个是警告！！！！
+::: details 必备工具
+ - 必装：安装[nodejs](https://yiov.top/website/nodejs.html)
+ - 建议安装：安装[vscode](https://yiov.top/website/VSCode.html)
+ - 可选安装：安装[git](https://yiov.top/website/pages/git.html)
 :::
-
-::: danger
-这个很危险
-:::
-
-::: details
-This is a details block.
-:::
-
 
 ::: code-group
 
 ```sh [pnpm]
-pnpm add -D @mdit-vue/shared
+#安装pnpm
+npm install -g pnpm
+#查看版本号
+pnpm -v
 ```
 
 ```sh [yarn]
-yarn add -D @mdit-vue/shared
+#安装yarn
+npm install -g yarn
+#查看版本号
+yarn -v
+```
+```sh [bun]
+#安装yarn
+npm install -g bun
+#查看版本号
+bun -v
+```
+:::
+
+
+::: details 创建目录
+`win键+R`键，输入 `cmd`，打开命令终端
+![alt text](https://img.deattor.us.kg/file/1730181138044_cmd-01.png)
+先进入任意盘符，比如 `F` 盘
+```sh
+#盘符可以自定义 回车进入
+f:
+```
+![alt text](https://img.deattor.us.kg/file/1730181380184_cmd-02.png)
+
+再创建文件夹名并进入
+
+```sh
+#创建目录并进入文件夹
+mkdir vitepress && cd vitepress
+```
+这样我的目录路径为 F:\vitepress
+我们先关闭cmd，一会介绍快捷进入的方法
+
+![alt text](https://img.deattor.us.kg/file/1730181438738_cmd-03.png)
+:::
+
+## 安装
+
+### 安装依赖
+
+在项目目录上方的地址栏，上输入 `cmd` 回车可以快捷打开
+
+![alt text](https://img.deattor.us.kg/file/1730181550917_cmd-04.png)
+
+![alt text](https://img.deattor.us.kg/file/1730181548648_cmd-05.png)
+
+然后我们安装`vitepress`
+
+::: code-group
+
+```sh [pnpm]
+pnpm add -D vitepress
+```
+
+```sh [yarn]
+yarn add -D vitepress
 ```
 
 ```sh [npm]
-npm i -D @mdit-vue/shared
+npm i -D vitepress
 ```
 
 ```sh [bun]
-bun add -D @mdit-vue/shared
+bun add -D vitepress
 ```
 :::
 
+![alt text](https://img.deattor.us.kg/file/1730181633254_cmd-06.png)
 
-
-
-属性
-
-油管链接图标：[Youtube](https://www.youtube.com/)
-
-B站链接图标：[哔哩哔哩](https://www.bilibili.com/)
-
-## 荧光笔
-
->   <sapn class="marker-text">这里是重重点</sapn>
-
->  <sapn class="marker-text-highlight">这里是重重点</sapn>
-
->  <sapn class="marker-evy">这里是尤雨溪的主页样式，鼠标放在我上面看效果</sapn>
-
-
-
-插槽
-
-## 代码块 
-
-```sh
-#默认有行号
-pnpm -v
-```
-
-```sh:no-line-numbers
-#关闭行号
-pnpm -v
-```
-
-## 代码组
+### 初始化向导
 
 ::: code-group
 
 ```sh [pnpm]
-#查询pnpm版本
-pnpm -v
+pnpm vitepress init
 ```
 
 ```sh [yarn]
-#查询yarn版本
-yarn -v
+yarn vitepress init
 ```
 
+```sh [npm]
+npx vitepress init
+```
+
+```sh [bun]
+bunx vitepress init
+```
 :::
 
 
+::: details 文件发位置放在 `./docs`
+文件夹名新手请参照下面，老手可以自己改
+如果你直接回车，则是放在了根目录 `./`，那你的 `脚本命令` 也要修改一下
+:::
+
+```sh
+T   Welcome to VitePress!
+|
+o  Where should VitePress initialize the config?
+|  ./docs
+|
+o  Site title:
+|  My Awesome Project
+|
+o  Site description:
+|  A VitePress Site
+|
+o  Theme:
+|  Default Theme
+|
+o  Use TypeScript for config and theme files?
+|  Yes
+|
+o  Add VitePress npm scripts to package.json?
+|  Yes
+|
+—  Done! Now run npm run docs:dev and start writing.
+```
+::: tip Vue 作为对等依赖
+如果您打算使用 Vue 组件或 API 进行自定义，您还应该显式 [安装 Vue](https://vitepress.yiov.top/components.html#%E5%AE%89%E8%A3%85) 作为对等依赖项
+如果你不懂，我们先暂时不看，我们后面会详细说
+:::
+
+## 脚本命令
+
+默认不用改，在 `package.json` 中可以查看
 
 
----
+
+

@@ -14,5 +14,6 @@ import { NAV_DATA } from '/.vitepress/theme/utils/data'
 </script>
 
 # 我的导航
+<confetti />
 
 <MNavLinks v-for="{title, items} in NAV_DATA" :title="title" :items="items"/>

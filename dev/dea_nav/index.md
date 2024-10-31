@@ -13,16 +13,17 @@ next: false
 import { NAV_DATA } from '/.vitepress/theme/utils/dea_data'
 </script>
 
-# 我的导航
+# 智能交易导航
 
 ---
 
  > 本站其他导航
+
   - 前端开发常用工具库 个人使用过或遇到的类库
   - 在线工具 一些实用的在线工具，免去下载软件的烦恼
 
 ---
 
-<center>DDDDD</center>
+**<center>DDDDD</center>**
 
 <MNavLinks v-for="{title, items} in NAV_DATA" :title="title" :items="items"/>

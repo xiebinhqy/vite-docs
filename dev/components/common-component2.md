@@ -1,6 +1,7 @@
 ---
 lastUpdated: true
 editLink: true
+comment: true
 ---
 
 # VitePress搭建个人导航

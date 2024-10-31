@@ -1,4 +1,5 @@
 import { defineConfig } from 'vitepress'
+import { groupIconMdPlugin, groupIconVitePlugin, localIconLoader } from 'vitepress-plugin-group-icons'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -9,10 +10,13 @@ export default defineConfig({
   outDir: "../docs", //build输出路径
   base: "/vite-docs/", //github-路径
   lastUpdated: true, //最后更新时间显示
+  cleanUrls:false, //开启纯净链接
+  ignoreDeadLinks: false, //关闭忽略死链，不配置即可，非常不建议设置为true
   //组件引入
   markdown: {
     // 组件插入h1标题下
     config: (md) => {
+      md.use(groupIconMdPlugin) //代码组图标
       md.renderer.rules.heading_close = (tokens, idx, options, env, slf) => {
           let htmlResult = slf.renderToken(tokens, idx, options);
           if (tokens[idx].tag === 'h1') htmlResult += `<ArticleMetadata />`; 
@@ -23,7 +27,8 @@ export default defineConfig({
       // 开启图片懒加载
       lazyLoading: true
     },
-
+    //行号显示
+    lineNumbers:true, //false关闭
   },
   vite:{
     css: {
@@ -33,13 +38,29 @@ export default defineConfig({
         }
       }
     },
+    plugins: [
+      groupIconVitePlugin({
+        customIcon:{
+          ts:localIconLoader(import.meta.url, '../public/svg/ts.svg'), ////本地ts图标导入自定义图标
+          js: 'logos:javascript', //js图标自定义图标
+          md: 'logos:markdown', //markdown图标自定义图标
+          css: 'logos:css-3', //css图标自定义图标
+        }
+      }) //代码组图标
+    ],
   },
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     outlineTitle:"目录",
     outline:[2,6],
     logo:'/logo.png',
-    siteTitle:'官方文档',
+    siteTitle:'技术文档',
+    //手机端深浅模式文字修改
+    darkModeSwitchLabel: '深浅模式',
+    //侧边栏文字更改(移动端)
+    sidebarMenuLabel:'目录', 
+    //返回顶部文字修改
+    returnToTopLabel:'返回顶部', 
     //允许自定义上次更新文本和日期格式
     lastUpdated:{
       text:'Updated at',
@@ -65,6 +86,7 @@ export default defineConfig({
         text:'导航',
         items: [
           { text: 'DEA导航', link: '/dea_nav/' },
+          { text: '技术导航', link: '/websites/' },
           { text: '原有导航', link: '/nav/' },
         ]
       },
@@ -126,16 +148,16 @@ export default defineConfig({
           items: [
             {text:'快速上手',link: '/components/basic-component1'},
             {text:'配置',link: '/components/basic-component2'},
-            {text:'页面',link: '/components/basic-component2'},
+            {text:'页面',link: '/components/basic-component3'},
           ]
         },
         {
           text: '文档教程',
           collapsed: false,
           items: [
-            {text:'功能展示',link: '/components/common-component1'},
+            {text:'功能展示',link: '/components/common-component4'},
             {text:'样式美化',link: '/components/common-component1'},
-            {text:'Frontmatter',link: '/components/common-component2'},
+            {text:'Frontmatter',link: '/components/common-component3'},
             {text:'页面导航搭建',link: '/components/common-component2'},
           ]
         },
@@ -143,7 +165,8 @@ export default defineConfig({
           text: '进阶扩展',
           collapsed: false,
           items: [
-            {text:'Markdown',link: '/components/pro-component1'},
+            {text:'Markdown',link: '/components/pro-component4'},
+            {text:'团队',link: '/components/team'},
             {text:'组件',link: '/components/pro-component1'},
             {text:'布局插槽',link: '/components/pro-component2'},
             {text:'插件',link: '/components/pro-component3'},

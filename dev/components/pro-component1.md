@@ -1,6 +1,7 @@
 ---
 editLink: true
 lastUpdated: true
+comment: true
 ---
 
 

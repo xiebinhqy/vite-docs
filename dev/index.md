@@ -39,3 +39,5 @@ features:
     details: 每个EA都附带一些书面说明和一些视频来解释 EA 的功能，并且每个 EA 都附带多个经过适当安排的设置文件。
 ---
 
+<HomeUnderline />
+<confetti /> 
