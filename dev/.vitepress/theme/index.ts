@@ -115,7 +115,7 @@ export default {
     }
 
     return h(DefaultTheme.Layout, props,{
-      'doc-footer-before': () => h(backtotop), // 使用doc-footer-before插槽 置顶
+      'doc-footer-before': () => h(backtotop), // 使用doc-footer-before插槽 右下角置頂按鈕
       //'layout-top': () => h(notice), // 使用layout-top插槽-公告
     })
   },

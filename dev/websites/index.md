@@ -13,6 +13,6 @@ next: false
 import { NAV_DATA } from '/.vitepress/theme/utils/data_websites'
 </script>
 
-# 网络技术收藏
-
+# 智能交易导航
+网络技术收藏
 <MNavLinks v-for="{title, items} in NAV_DATA" :title="title" :items="items"/>

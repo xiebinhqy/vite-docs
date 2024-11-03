@@ -13,7 +13,7 @@ next: false
 import { NAV_DATA } from '/.vitepress/theme/utils/dea_data'
 </script>
 
-# 智能交易导航
+# 网络技术收藏
 
 ---
 

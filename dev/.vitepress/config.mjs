@@ -3,7 +3,7 @@ import { groupIconMdPlugin, groupIconVitePlugin, localIconLoader } from 'vitepre
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: "一武智能辅助文档",
+  title: "智能辅助文档",
   description: "A VitePress Site",
   lang: 'cn-ZH',
   head: [["link", { rel: "icon", href: "/vite-docs/jilu.png" }]],
@@ -53,7 +53,7 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     outlineTitle:"目录",
     outline:[2,6],
-    logo:'/logo.png',
+    logo:'/logo-x.png',
     siteTitle:'技术文档',
     //手机端深浅模式文字修改
     darkModeSwitchLabel: '深浅模式',
@@ -85,16 +85,16 @@ export default defineConfig({
       {
         text:'导航',
         items: [
-          { text: 'DEA导航', link: '/dea_nav/' },
-          { text: '技术导航', link: '/websites/' },
-          { text: '原有导航', link: '/nav/' },
+          { text: '📁DEA导航', link: '/dea_nav/' },
+          { text: '💵外汇导航', link: '/websites/' },
+          { text: '🖱️编程导航', link: '/nav/' },
         ]
       },
-      {text: "指南",link: '/guide/'},
-      {text: "前端",link: '/backend/index'},
-      { text: 'Extension', link: '/Forex_extension' },
+      {text: "🍓指南",link: '/guide/'},
+      {text: "🌎Auto Trading",link: '/backend/index'},
+      { text: '📈Extension', link: '/Forex_extension' },
       {
-        text:'Dropdown Menu',
+        text:'💻Dropdown Menu',
         items: [
           { text: '货币对冲', link: '/currency_hedging/' },
           { text: '趋势策略', link: '/rend_strategy/' },
@@ -102,14 +102,14 @@ export default defineConfig({
         ]
       },
       {
-        text:'Index Menu',
+        text:'🖥️Index Menu',
         items: [
           { text: '货币对冲', link: '/currency_hedging/' },
           { text: '趋势策略', link: '/rend_strategy/' },
           { text: 'XAU交易策略', link: '/xau_ea/' },
         ]
       },
-      {text: "文档教程",link: '/components/basic-component1'},
+      {text: "📑文档教程",link: '/components/basic-component1'},
     ],
 
     sidebar: {
@@ -133,17 +133,32 @@ export default defineConfig({
       ],
       '/backend': [
         {
-          text:'前端',
+          text:'介绍',
+          collapsed: false,
           items:[
-            {text:'最开始介绍',link: '/backend/'},
+            {text:'前言',link: '/backend/'},
+          ]
+        },
+        {
+          text:'外汇平台',
+          collapsed: true,
+          items:[
             {text:'入门',link: '/backend/rabbitmq入门'},
             {text:'精通',link: '/backend/rocketmq精通'},
           ]
-        }
+        },
+        {
+          text:'平台进阶使用',
+          collapsed: true,
+          items:[
+            {text:'入门',link: '/backend/rabbitmq入门'},
+            {text:'精通',link: '/backend/rocketmq精通'},
+          ]
+        },
       ],
       '/components': [
         {
-          text: '基础配置',
+          text: '🏴󠁧󠁢󠁥󠁮󠁧󠁿基础配置',
           collapsed: false,
           items: [
             {text:'快速上手',link: '/components/basic-component1'},
@@ -152,7 +167,7 @@ export default defineConfig({
           ]
         },
         {
-          text: '文档教程',
+          text: '⬇️文档教程',
           collapsed: false,
           items: [
             {text:'功能展示',link: '/components/common-component4'},
@@ -162,14 +177,15 @@ export default defineConfig({
           ]
         },
         {
-          text: '进阶扩展',
+          text: '⬇️进阶扩展',
           collapsed: false,
           items: [
             {text:'Markdown',link: '/components/pro-component4'},
-            {text:'团队',link: '/components/team'},
+            {text:'💻️团队',link: '/components/team'},
             {text:'组件',link: '/components/pro-component1'},
             {text:'布局插槽',link: '/components/pro-component2'},
             {text:'插件',link: '/components/pro-component3'},
+            {text:'文档常用链接',link: '/components/pro-link'},
           ]
         }
       ],

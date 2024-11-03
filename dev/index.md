@@ -23,12 +23,12 @@ hero:
     - theme: alt
       text: 文 档
       link: /markdown-examples
-    - theme: alt
+    - theme: sponsor
       text: 使用教程
       link: /api-examples
 
 features:
-  - title: 专业 EA
+  - title: 💹专业EA
     details: EA 不仅编码专业，而且策略本身也很专业，可以在任何市场条件下进行交易。根据我们长期的经验，EA 能够理解几乎所有市场条件。
   - title: 全面测试的EA
     details: 所有EA均在演示、真实账户和提供给客户之前进行了全面测试。因此，当客户拥有 EA 时，他们可以无忧无虑地使用它。
