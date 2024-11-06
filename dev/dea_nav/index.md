@@ -10,10 +10,10 @@ next: false
 <style src="/.vitepress/theme/style/nav.scss"></style>
 
 <script setup>
-import { NAV_DATA } from '/.vitepress/theme/utils/dea_data'
+import { NAV_DATA } from '/.vitepress/theme/utils/dea_myself'
 </script>
 
-# 网络技术收藏
+# 个人收藏导航
 
 ---
 

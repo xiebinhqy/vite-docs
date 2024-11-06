@@ -85,9 +85,9 @@ export default defineConfig({
       {
         text:'导航',
         items: [
-          { text: '📁DEA导航', link: '/dea_nav/' },
-          { text: '💵外汇导航', link: '/websites/' },
-          { text: '🖱️编程导航', link: '/nav/' },
+          { text: '📁个人收藏导航', link: '/dea_nav/' },
+          { text: '💵智能交易导航', link: '/websites/' },
+          { text: '🖱️网络技术导航', link: '/nav/' },
         ]
       },
       {text: "🍓指南",link: '/guide/'},
@@ -109,7 +109,7 @@ export default defineConfig({
           { text: 'XAU交易策略', link: '/xau_ea/' },
         ]
       },
-      {text: "📑文档教程",link: '/components/basic-component1'},
+      {text: "📑文档教程",link: '/components/getting-started'},
     ],
 
     sidebar: {
@@ -143,8 +143,15 @@ export default defineConfig({
           text:'外汇平台',
           collapsed: true,
           items:[
-            {text:'入门',link: '/backend/rabbitmq入门'},
-            {text:'精通',link: '/backend/rocketmq精通'},
+            {text:'平台简介',link: '/backend/Preface'},
+            {text:'⭐️LMAX',link: '/backend/lmax'},
+            {text:'⭐️EBC',link: '/backend/ebc'},
+            {text:'⭐️XM',link: '/backend/xm'},
+            {text:'⭐️IC',link: '/backend/ic'},
+            {text:'⭐️EC',link: '/backend/ec'},
+            {text:'⭐️德普',link: '/backend/Doo-Prime'},
+            {text:'⭐️瑞讯银行',link: '/backend/Swissquote'},
+            {text:'⭐️杜高斯贝',link: '/backend/Dukascopy-Bank'},
           ]
         },
         {
@@ -156,14 +163,40 @@ export default defineConfig({
           ]
         },
       ],
+      '/Forex_extension': [
+        {
+          text:'介绍',
+          collapsed: false,
+          items:[
+            {text:'前言',link: '/Forex_extension/'},
+          ]
+        },
+        {
+          text:'教程搭建',
+          collapsed: true,
+          items:[
+            {text:'甲骨云搭建',link: '/Forex_extension/oracle'},
+            {text:'server00搭建',link: '/Forex_extension/server00'},
+            {text:'CF图床搭建',link: '/Forex_extension/rocketmq精通'},
+          ]
+        },
+        {
+          text:'平台进阶使用',
+          collapsed: true,
+          items:[
+            {text:'入门',link: '/Forex_extension/rabbitmq入门'},
+            {text:'精通',link: '/Forex_extension/rocketmq精通'},
+          ]
+        },
+      ],
       '/components': [
         {
           text: '🏴󠁧󠁢󠁥󠁮󠁧󠁿基础配置',
           collapsed: false,
           items: [
-            {text:'快速上手',link: '/components/basic-component1'},
-            {text:'配置',link: '/components/basic-component2'},
-            {text:'页面',link: '/components/basic-component3'},
+            {text:'快速上手',link: '/components/getting-started'},
+            {text:'配置',link: '/components/configuration'},
+            {text:'页面',link: '/components/page'},
           ]
         },
         {
@@ -171,20 +204,20 @@ export default defineConfig({
           collapsed: false,
           items: [
             {text:'功能展示',link: '/components/common-component4'},
-            {text:'样式美化',link: '/components/common-component1'},
-            {text:'Frontmatter',link: '/components/common-component3'},
-            {text:'页面导航搭建',link: '/components/common-component2'},
+            {text:'样式美化',link: '/components/style'},
+            {text:'Frontmatter',link: '/components/frontmatter'},
+            {text:'页面导航搭建',link: '/components/nav'},
           ]
         },
         {
           text: '⬇️进阶扩展',
           collapsed: false,
           items: [
-            {text:'Markdown',link: '/components/pro-component4'},
+            {text:'Markdown',link: '/components/markdown'},
             {text:'💻️团队',link: '/components/team'},
-            {text:'组件',link: '/components/pro-component1'},
-            {text:'布局插槽',link: '/components/pro-component2'},
-            {text:'插件',link: '/components/pro-component3'},
+            {text:'组件',link: '/components/components'},
+            {text:'布局插槽',link: '/components/layout'},
+            {text:'插件',link: '/components/plugin'},
             {text:'文档常用链接',link: '/components/pro-link'},
           ]
         }

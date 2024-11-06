@@ -10,7 +10,7 @@ next: false
 <style src="/.vitepress/theme/style/nav.scss"></style>
 
 <script setup>
-import { NAV_DATA } from '/.vitepress/theme/utils/data'
+import { NAV_DATA } from '/.vitepress/theme/utils/wangluojishu'
 </script>
 
 # 网络技术导航

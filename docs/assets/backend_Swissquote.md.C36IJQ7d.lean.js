@@ -1,0 +1,1 @@
+import{_ as e,c as t,o as a}from"./chunks/framework.HlnzNVxZ.js";const l=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"backend/Swissquote.md","filePath":"backend/Swissquote.md","lastUpdated":null}'),s={name:"backend/Swissquote.md"};function o(n,c,r,d,i,p){return a(),t("div")}const m=e(s,[["render",o]]);export{l as __pageData,m as default};
